@@ -10,11 +10,17 @@ apps. This enabled libraries to access the same APIs and yet call the equivalent
 the Fyne ecosystem. To make use of this simply add the following line to your `go.mod` file.
 
 ```
-replace golang.org/x/mobile => github.com/fyne-io/gomobile-bridge v0.0.1
+replace golang.org/x/mobile => github.com/fyne-io/gomobile-bridge v0.1.0
 ```
 
-If you have a vendor package it then you should update those files using the `fyne vendor` command:
+And then update your module info with:
 
 ```
-$ go mod tidy && fyne vendor
+go mod tidy
+```
+
+If you have a vendor directory it then you should update those files using the `vendor` command:
+
+```
+go mod vendor
 ```
